@@ -39,7 +39,7 @@ export class InfoPaginaService {
       .subscribe( (resp: any []) =>{
        
         this.equipo = resp;
-        console.log(resp); //se puede elegir la respuesta que quiero mostrar ya que es un objeto.
+       // console.log(resp); //se puede elegir la respuesta que quiero mostrar ya que es un objeto.
 
       })
     }
