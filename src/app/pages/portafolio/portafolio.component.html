@@ -1,5 +1,22 @@
-    <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
-      <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+    
+  <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
+
+     <!-- 1 -->
+
+      <div aling="center" *ngIf="_productosService.cargando">
+        <h2>Cargando</h2>
+        <div class="loader loader--style1" title="0">
+
+        </div>
+    <p>
+        Por favor espere
+    </p>    
+
+  </div>
+    
+    
+    
+      <div *ngIf="!_productosService.cargando" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
         <a *ngFor="let producto of _productosService.productos" 
           routerLink="/item/{{ producto.cod }}" class="rk-item ae-masonry__item">
@@ -12,20 +29,10 @@
 
         
       </div>
-    </section>
 
-    <!-- 1 -->
+  </section>
 
-    <div aling="center">
-          <h2>Cargando</h2>
-          <div class="loader loader--style1" title="0">
-
-          </div>
-      <p>
-          Por favor espere
-      </p>    
-
-    </div>
+  
 
 
 
